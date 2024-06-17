@@ -8,8 +8,8 @@
     visualizações somente leitura de listas mutáveis convertendo-as em List.
  */
 
-val systemUsers: MutableList<Int> = mutableListOf(1, 2, 3)        // 1
-val sudoers: List<Int> = systemUsers                              // 2
+val systemUsers: MutableList<Int> = mutableListOf(1, 2, 3)        // 1 - é uma val (imutável) que recebe um MutableList. Essa val não pode receber outra instancia de nada, mas esta instância é mutável.
+val sudoers: List<Int> = systemUsers                              // 2 - sudoers é val (imutável) e recebe uma cópia List (imutável) da systemUsers.
 
 fun addSystemUser(newUser: Int) {                                 // 3
     systemUsers.add(newUser)
@@ -26,4 +26,5 @@ fun main() {
             i -> println("Some useful info on user $i")
     }
     // getSysSudoers().add(5) <- Error!                           // 8
+    // sudoers.add(5) <- Error!                                   // 9
 }
