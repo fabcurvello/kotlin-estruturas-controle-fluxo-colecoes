@@ -2,10 +2,11 @@ fun main() {
     //cases("Hello")
     //cases(1)
     //cases(0L)
-    //cases(MyClass())
+    //cases(MyClass1())
     cases("hello")
 }
 
+// função recebe any (qualquer coisa)
 fun cases(obj: Any) {
     when (obj) {
         1 -> println("One")
@@ -16,4 +17,4 @@ fun cases(obj: Any) {
     }
 }
 
-class MyClass
+class MyClass1
